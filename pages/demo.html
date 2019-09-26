@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Futura Bootstrap Theme</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom built theme - This already includes Bootstrap 4 -->
+    <link rel="stylesheet" href="../scss/futura.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-futura fixed-top navbar-expand-lg">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-uppercase" href="index.html">Futura</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo" my-2 my-lg-0>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="index.html">Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="components.html">Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="style.html">Style</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="demo.html">Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="masthead">
+        <div class="container">
+        <h1 class="display-3 text-uppercase text-center">Fredrik Yumo</h1>
+        <p class="lead text-center">I take pictures.</p>
+        </div>
+    </header>
+
+    <div class="container text-center">
+        <h2 class="text-uppercase">Portfolio</h2>
+        <p class="pl-4">Click on the pictures below to read about some of my shoots.</p>
+        <div class="row">
+            <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    for (var i = 0; i < 4; i++) {
+                        var col = document.createElement('div');
+                        $(col).addClass('col-lg-6 pb-4');
+                        $(col).appendTo('.row');
+                        var card = document.createElement('div');
+                        $(card).addClass('card');
+                        $(card).appendTo(col);
+                        var link = document.createElement('a');
+                        $(link).addClass('card-link');
+                        $(link).attr('href', 'demo-' + i + '.html');
+                        $(link).appendTo(card);
+                        var img = document.createElement('img');
+                        $(img).addClass('card-img-top');
+                        $(img).attr('src', '../img/demo/' + i + '.jpg').attr('alt', 'Card image cap');
+                        $(img).appendTo(link);
+                        var overlay = document.createElement('div');
+                        $(overlay).addClass('card-img-overlay');
+                        var header = document.createElement('h2');
+                        $(header).addClass('card-text text-uppercase');
+                        if (i == 0) {
+                            $(header).html('Slo Sf');
+                        } else if (i == 1) {
+                            $(header).html('Portland');
+                        } else if (i == 2) {
+                            $(header).html('Lake Wenatchee');
+                        } else if (i == 3) {
+                            $(header).html('Alki');
+                        }
+                        $(header).appendTo(overlay);
+                        $(overlay).appendTo(link);
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <footer class="footer bg-primary">
+      <ul class="list-inline">
+        <li><a href="https://www.facebook.com/fredrik.yumo"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/freddybear13/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/fredrikyumo/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/fyumo13"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.flickr.com/photos/freddybear13/"><i class="fab fa-flickr"></i></a></li>
+      </ul>
+  </footer>
+
+<script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</html>

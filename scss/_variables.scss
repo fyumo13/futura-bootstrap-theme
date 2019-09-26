@@ -1,0 +1,19 @@
+$font-family-base: Futura, "Trebuchet MS", Arial, sans-serif;
+$body-bg: #131313;
+$body-color: #fff;
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$card-border-color: none;
+$code-color: #67b6ff;
+
+$theme-colors: (
+    "primary": #f57272,
+    "secondary": #2b4761,
+    "success": #7adf92,
+    "danger": #ff0000,
+    "warning": #ffdc73,
+    "info": #67b6ff,
+    "light": #e1e6ea,
+    "dark": rgb(0, 0, 0),
+);

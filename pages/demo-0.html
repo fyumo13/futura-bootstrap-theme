@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Futura Bootstrap Theme</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom built theme - This already includes Bootstrap 4 -->
+    <link rel="stylesheet" href="../scss/futura.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-futura fixed-top navbar-expand-lg">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-uppercase" href="index.html">Futura</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo" my-2 my-lg-0>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="index.html">Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="components.html">Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="style.html">Style</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-lowercase" href="demo.html">Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4 text-uppercase">Slo SF</h1>
+            <p>Trip to San Luis Obispo, CA for Landon's wedding. Drove 2 hours to San Francisco for New Year's Eve. Drank a ton of beer and liquor. Ate a lot of good food. Took a couple pictures.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row 6-col">
+            <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    for (var i = 0; i < 6; i++) {
+                        var col = document.createElement('div');
+                        $(col).addClass('col-lg-6 pb-4');
+                        $(col).appendTo('.6-col');
+                        var card = document.createElement('div');
+                        $(card).addClass('card');
+                        $(card).appendTo(col);
+                        var link = document.createElement('a');
+                        $(link).addClass('card-link');
+                        $(link).attr('href', '#').attr('data-toggle', 'modal').attr('data-target', 'img-modal');
+                        $(link).appendTo(card);
+                        var img = document.createElement('img');
+                        $(img).addClass('card-img-top modal-btn');
+                        $(img).attr('src','../img/demo/slo-sf/' + i + '.jpg').attr('alt', 'Card image cap');
+                        $(img).appendTo(link);  
+                    } 
+                });
+            </script>
+        </div>
+    </div>
+
+    <!-- modals -->
+    <div class="modal fade" id="img-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="img-src" src="" alt="Modal Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-primary">
+        <ul class="list-inline">
+            <li><a href="https://www.facebook.com/fredrik.yumo"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/freddybear13/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/fredrikyumo/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/fyumo13"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.flickr.com/photos/freddybear13/"><i class="fab fa-flickr"></i></a></li>
+        </ul>
+    </footer>
+
+<script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".modal-btn").on("click", function() {
+            var btn = $(event.relatedTarget);
+            var img = btn.data("img");
+            $("#img-src").attr("src", $(this).attr("src"));
+            $("#img-modal").modal();
+        });
+    });
+</script>
+<script src="../node_modules/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+.blockquote {
+    background-color: map-get($theme-colors, secondary);;
+    font-style: italic;
+    margin: 30px;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    color: $dark;
+    background: transparent;
+    h5 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.card-img-top {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.75);
+}
+
+.card-header {
+    background-color: map-get($theme-colors, primary);
+    color: #fff;
+}
+
+.card-text {
+    text-align: center;
+    margin-top: 30%;
+    color: #fff;
+    background-color: map-get($theme-colors, primary);
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+.card-img-overlay:hover {
+    opacity: 0.75;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: map-get($theme-colors, primary);
+}
+
+.footer {
+    a {
+    color: #fff;
+    }
+    ul {
+        margin: 0 auto; 
+        padding-left: 25px;
+    }
+    li {
+    display: inline-block;
+    padding: 30px 10px;
+    }
+}
+
+.form-control {
+    background: transparent;
+    border-bottom: 2.5px solid map-get($theme-colors, primary);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.form-control:focus {
+    background-color: map-get($theme-colors, primary);
+    border-color: map-get($theme-colors, primary);
+}
+
+.form-futura {
+    padding: 20px;
+    background-color: #000;
+}
+
+.jumbotron {
+    padding-top: 10%;
+    margin-bottom: 0;
+    border-bottom: 10px solid $light;
+    background: transparent;
+    text-align: center;
+    h1, h2, h3, h4 {
+        background-color: map-get($theme-colors, primary);
+    }
+    p {
+    padding-left: 20%;
+    width: 80%;
+    }
+}
+
+.masthead {
+    display: flex;
+    background: #131313 url(../img/4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 90vh;
+    align-items: center;
+    margin-bottom: 20px;
+    .container {
+        margin-top: 11%;
+    }
+    h1, p {
+        color: rgba(255, 255, 255, 0.75);
+    }
+    h1 {
+        background-color: map-get($theme-colors, primary);
+        opacity: 0.75;
+    }
+    p {
+        width: 80%;
+        padding-left: 20%;
+    }
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.75);
+    img {
+        width: 100%;
+    }
+}
+
+// small devices, tablets
+@media only screen and (min-width: 768px) {
+    .modal-content {
+        width: 140%;
+    }
+
+    .modal-dialog {
+        margin: 2.5% 5%;
+        width: 140%;
+    }
+}
+
+// medium devices, desktops
+@media only screen and (min-width: 992px) {
+    .modal-content {
+        width: 165%;
+    }
+    
+    .modal-dialog {
+        margin: 3% 10%;
+        width: 165%;
+    }
+}
+
+// large devies, wide screens
+@media only screen and (min-width: 1200px) {
+    .modal-content {
+        width: 180%;
+    }
+
+    .modal-dialog {
+        margin: 5% 20%;
+        width: 180%;
+    }
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+.navbar-futura {
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    a, .navbar-brand {
+        color: #000;
+    }
+    .nav-item:hover {
+        background-color: map-get($theme-colors, primary);
+    }
+}
+
+.page-link {
+    color: #000;
+    border: none;
+}
+.page-link:hover, .page-link:focus {
+    color: #000;
+    background-color: map-get($theme-colors, primary);
+}
