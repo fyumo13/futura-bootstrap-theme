@@ -12,32 +12,7 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-futura fixed-top navbar-expand-lg">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand text-uppercase" href="index.html">Futura</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo" my-2 my-lg-0>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-lowercase" href="index.html">Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-lowercase" href="components.html">Components</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-lowercase" href="style.html">Style</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-lowercase" href="demo.html">Demo</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar navbar-futura fixed-top navbar-expand-lg" id="navbar"></nav>
 
     <header class="masthead">
         <div class="container">
@@ -89,17 +64,15 @@
         </div>
     </div>
 
-    <footer class="footer bg-primary">
-      <ul class="list-inline">
-        <li><a href="https://www.facebook.com/fredrik.yumo"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://www.instagram.com/freddybear13/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/fredrikyumo/"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/fyumo13"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://www.flickr.com/photos/freddybear13/"><i class="fab fa-flickr"></i></a></li>
-      </ul>
-  </footer>
+    <footer class="footer bg-primary" id="footer"></footer>
 
 <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#navbar').load('navbar.html');
+    $('#footer').load('footer.html');
+  })
+</script>
 <script src="../node_modules/popper.js/dist/umd/popper.js" type="text/javascript"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 
